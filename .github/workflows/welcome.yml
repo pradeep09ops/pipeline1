@@ -1,13 +1,13 @@
 name: Post welcome comment
 on:
-  pull_request:
-    types: [opened]
+  workflow_dispatch:
+  
 jobs:
   build:
     name: Post welcome comment
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Welcome to the Repo"
+      - run: echo "Welcome to the Repo" $First_Name "**********"
         env:
           First_Name: ''
           
